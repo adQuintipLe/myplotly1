@@ -335,28 +335,36 @@ function tester7(){
 }
 
 function customPlot(){
+
+    var x_value = [1,2,3,4,5,6,7];
+
+    var y_trace1 = [0,7,5,12,4,5,7];
+    var y_trace2 = [1,1,3,1,5,2,5];
+    var y_trace3 = [18,15,16,13,11,11,12];
+    var y_trace4 = [11,15,2,18,8,10,7];
+    var y_trace5 = [6,5,4,3,7,1,0];
     
     var trace1 = {
-        x: [1, 2, 3, 4, 5],
-        y: [1, 3, 2, 3, 1],
-        mode: 'lines',       //declare types of graph eg lines,marker 
-        name: 'Solid',       // naming legend lines of graph
-        text: 'tester1',     //display text when cursor on lines
+        x: x_value,
+        y: y_trace1,
+        mode: 'lines',                    //declare types of graph eg lines,marker 
+        name: 'WGR',                    // naming legend lines of graph
+        text: 'This is WGRs line',     //display text when cursor on lines
         hoverinfo:'text',    
         yaxis: 'y1',
         line: {
-          dash: 'solid',      //type lining dot, dashdot, solid
+          dash: 'solid',                //type lining dot, dashdot, solid
           color: '#ffbb33',
-          width: 2             //width of lines
+          width: 2                      //width of lines
         },
       };
       
       var trace2 = {
-        x: [1, 2, 3, 4, 5],
-        y: [6, 8, 7, 8, 6],
+        x: x_value,
+        y: y_trace2,
         mode: 'lines',
-        name: 'dashdot',
-        text: 'tester1',
+        name: 'Gas Rate',
+        text: 'This is Gas Rates line',
         hoverinfo:'text',
         yaxis: 'y2',
         line: {
@@ -367,11 +375,11 @@ function customPlot(){
       };
       
       var trace3 = {
-        x: [1, 2, 3, 4, 5],
-        y: [11, 13, 12, 13, 11],
+        x: x_value,
+        y: y_trace3,
         mode: 'lines',
-        name: 'dashdot',
-        text: 'tester1',
+        name: 'CGR',
+        text: 'This is CGRs line',
         hoverinfo:'text',
         yaxis: 'y3',
         line: {
@@ -382,11 +390,11 @@ function customPlot(){
       };
       
       var trace4 = {
-        x: [1, 2, 3, 4, 5],
-        y: [16, 18, 17, 18, 16],
+        x: x_value,
+        y: y_trace4,
         mode: 'lines',
-        name: 'dashdot',
-        text: 'tester1',
+        name: 'FTHP',
+        text: 'This is FTHPs line',
         yaxis: 'y4',
         line: {
           dash: 'solid',
@@ -396,11 +404,11 @@ function customPlot(){
       };
 
       var trace5 = {
-        x: [1, 2, 3, 4, 5],
-        y: [1, 18, 13, 5, 16],
+        x: x_value,
+        y: y_trace5,
         mode: 'lines',
-        name: 'dashdot',
-        text: 'tester1',
+        name: 'Choke',
+        text: 'This is Chokes line',
         yaxis: 'y5',
         line: {
           dash: 'solid',
@@ -422,7 +430,7 @@ function customPlot(){
         width: 1400,
         height: 550,
         xaxis: {
-          range: [0.75, 5.25],
+          range: [0.75, 7],
           domain: [0.12,0.95]
         },
         yaxis: {
